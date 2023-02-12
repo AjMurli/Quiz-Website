@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz Game</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 97vh;
+            background: linear-gradient(90deg, #070e2b, #020338);
+
+        }
+
+        #main {
+            /* background-color: rgb(0, 254, 47); */
+            background: linear-gradient(90deg, #1beca3, #12d25f);
+
+            padding: 2rem;
+            border-radius: .2rem;
+        }
+
+        #firstRow,
+        #secondRow {
+            display: flex;
+            margin-bottom: .5rem;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            background-color: #53ff98;
+            min-width: 250px;
+            min-height: 40px;
+            margin-left: 1rem;
+            border-radius: .3rem;
+            font-size: .8rem;
+        }
+
+        .row:hover {
+            /* background-color: rgb(25, 0, 255); */
+            background-color: #030b2b;
+            color: white;
+        }
+
+        label {
+            cursor: pointer;
+            padding-left: 1rem;
+        }
+
+        .btn {
+            width: 100%;
+            outline: none;
+            border: none;
+            border-radius: .3rem;
+            padding: .8rem 0;
+            margin-top: .8rem;
+            font-weight: bolder;
+            background-color: #070e2b;
+            /* background-color: rgb(23, 11, 253); */
+            color: white;
+
+        }
+
+        .btn:hover {
+            /* background-color: rgb(0, 0, 255); */
+            background-color: #030b2b;
+
+            cursor: pointer;
+        }
+
+        .options {
+            accent-color: rgb(9, 1, 99);
+            width: 25px;
+        }
+
+        @media screen and (max-width:400px) {
+
+            #firstRow,
+            #secondRow {
+                display: flex;
+                margin-bottom: 0.5rem;
+                flex-wrap: nowrap;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="box">
+            <h3 id="quesBox">A) This is the Dummy Question</h3>
+
+            <div id="firstRow">
+                <div class="row">
+                    <input class="options" id="option1" type="radio" value="a" name="option">
+                    <label for="option1">Option1</label>
+                </div>
+
+                <div class="row">
+                    <input class="options" id="option2" type="radio" value="b" name="option">
+                    <label for="option2">Option2</label>
+                </div>
+            </div>
+            <div id="secondRow">
+
+                <div class="row">
+                    <input class="options" id="option3" type="radio" value="c" name="option">
+                    <label for="option3">Option3</label>
+                </div>
+
+                <div class="row">
+                    <input class="options" id="option4" type="radio" value="d" name="option">
+                    <label for="option4"> Option4</label>
+                </div>
+            </div>
+
+            <button class="btn" onclick="submitQuiz()">Submit</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
